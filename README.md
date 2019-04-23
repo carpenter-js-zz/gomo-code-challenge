@@ -30,12 +30,23 @@ not yet sure how to go about that.
 
 ## Test Plan
 
-Test input:
+Test input: <br>
 Because the input data set has be in a particular format, I would want to write tests to check the input data.
 
-Test findUVT() function output:
+Should fail if input = "[{start: num, end: num}]" or "start: num, end: num" or [{start: num, end: num}]
+Ideally there would be a nice error message to tell the user what went wrong and explain the correct data format. I would 
+want to test that this fires correctly on fail.
+
+Should pass if input = [{"start": num, "end": num}]
+
+
+Test findUVT() function output: <br>
 I would want to write tests to verify that the findUVT() function is outputting the correct data type, in this case 
 a number.
+Should pass if typeof UVT === number
+Should fail if typeof UVT !== number
 
 I would also write a test that runs the program with a hardcoded data set of view times with a known UVT to verify 
 that the correct UVT is being output.
+Should pass if returned UVT matches expected UVT
+Should fail if returned UVT is < || > expected UVT
