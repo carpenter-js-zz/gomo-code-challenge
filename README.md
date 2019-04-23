@@ -23,7 +23,7 @@ Data template:
 The program takes data as an array of objects, finds the total view time of all the inputed view fragments, and then subtracts
 the duplicate view times from the total view time to arrive at the unique view time total. 
 
-Currently the program has a runtime complexity of 0(n^2 * 2)
+Currently the program has a runtime complexity of 0(n^2 * 2).
 This is a really high complexity. My next steps would be to refactor my code to be more efficient. I believe that 
 with the use of a hash map data structure this algorithm could be rewritten to have a linear runtime complexity, though I am 
 not yet sure how to go about that.
