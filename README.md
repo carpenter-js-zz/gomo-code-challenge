@@ -1,6 +1,8 @@
 ### Unique View Parser
 
 I built this program using Javascript, and Node's Readline module to create the command line interface.
+I left my scratch files that I developed my algorith in so you could see my process and some other approaches 
+to the problem I tried.
 
 ## To Run
 
