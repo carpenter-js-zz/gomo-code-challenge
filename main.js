@@ -46,12 +46,25 @@ function findUVT(data) {
   return UVT;
 }
 
+function msToTime(duration) {
+  let milliseconds = parseInt((duration % 1000) / 100),
+    seconds = Math.floor((duration / 1000) % 60),
+    minutes = Math.floor((duration / (1000 * 60)) % 60),
+    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+  hours = (hours < 10) ? '0' + hours : hours;
+  minutes = (minutes < 10) ? '0' + minutes : minutes;
+  seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+  return hours + ':' + minutes + ':' + seconds + '.' + milliseconds;
+}
 
 rl.question('Input view data: ', (answer) => {
   let input = JSON.parse(answer);
-  let uniqueViewTime = findUVT(input);
+  let uniqueViewTimeMS = findUVT(input);
+  let uniqueViewTime = msToTime(uniqueViewTimeMS);
 
-  console.log('The Unique View Time is: ', uniqueViewTime, 'ms');
+  console.log('The Unique View Time is: ', uniqueViewTime);
 
   rl.close();
 });
