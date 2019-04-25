@@ -1,7 +1,7 @@
 ### Unique View Parser
 
 I built this program using Javascript, and Node's Readline module to create the command line interface.
-I left my scratch files that I developed my algorith in so you could see my process and some other approaches 
+I left my scratch files that I developed my algorithm in so you could see my process and some other approaches 
 to the problem I tried.
 
 ## To Run
@@ -23,10 +23,10 @@ Data template:
 The program takes data as an array of objects, finds the total view time of all the inputed view fragments, and then subtracts
 the duplicate view times from the total view time to arrive at the unique view time total. 
 
-Currently the program has a runtime complexity of 0(n^2 * 2)
+Currently the program has a runtime complexity of 0(n^2 * 2).
 This is a really high complexity. My next steps would be to refactor my code to be more efficient. I believe that 
 with the use of a hash map data structure this algorithm could be rewritten to have a linear runtime complexity, though I am 
-not yet sure how to go about that.
+not yet sure how to go about that. 
 
 ## Test Plan
 
@@ -34,8 +34,6 @@ Test input: <br>
 Because the input data set has be in a particular format, I would want to write tests to check the input data.
 
 Should fail if input = "[{start: num, end: num}]" or "start: num, end: num" or [{start: num, end: num}]
-Ideally there would be a nice error message to tell the user what went wrong and explain the correct data format. I would 
-want to test that this fires correctly on fail.
 
 Should pass if input = [{"start": num, "end": num}]
 
